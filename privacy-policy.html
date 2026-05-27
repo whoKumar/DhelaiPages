@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Dhelai</title>
+  <meta
+    name="description"
+    content="How Dhelai handles your data. Simple, specific, and short."
+  />
+  <meta name="theme-color" content="#5B3A9B" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">dhelai</a>
+      <a href="/#read-in-app" class="nav-cta">Read in app</a>
+    </div>
+  </nav>
+
+  <article class="legal">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 26 May 2026</p>
+
+    <p class="lead">
+      This is a plain-language summary of what we collect, why, and what you can do
+      about it. Dhelai is built by <strong>Govind Kumar Wadhwa</strong> and operated from
+      India. Questions go to <a href="mailto:support@dhelai.in">support@dhelai.in</a>.
+    </p>
+
+    <h2>1. Who this applies to</h2>
+    <p>
+      This policy covers the <strong>Dhelai</strong> mobile app (Android &amp; iOS, package
+      identifier <code>dhelai.in</code>) and the website <strong>dhelai.in</strong>. It does
+      <em>not</em> cover purchases you make on Amazon, Apple Books, or Google Play Books —
+      those storefronts have their own privacy policies.
+    </p>
+
+    <h2>2. What we collect</h2>
+    <p>
+      We only collect what we need to make the reading app work. Concretely:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>What</th>
+          <th>When</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email, name, profile photo</td>
+          <td>When you sign in with Google</td>
+          <td>To identify your account and sync reading progress across devices</td>
+        </tr>
+        <tr>
+          <td>Reading activity (chapters opened, time spent, words credited)</td>
+          <td>While you use the app</td>
+          <td>To show you your own progress, streak, and stats on the profile screen</td>
+        </tr>
+        <tr>
+          <td>Book likes and saves</td>
+          <td>When you tap the heart on a book</td>
+          <td>So your saved list is available across devices</td>
+        </tr>
+        <tr>
+          <td>Aggregate book opens (anonymous count)</td>
+          <td>When any user opens a book detail page</td>
+          <td>To display public "readers" tier on the book page (e.g., "100+ readers")</td>
+        </tr>
+        <tr>
+          <td>App version + platform (iOS / Android)</td>
+          <td>On launch</td>
+          <td>To show the right update prompt and store links</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      We do <strong>not</strong> collect: precise location, contacts, microphone, camera,
+      SMS, call logs, browsing history outside the app, advertising IDs, or any data we
+      don't have a direct use for. We don't use third-party analytics SDKs (no Facebook
+      SDK, no Mixpanel, no Firebase Analytics, no AppsFlyer).
+    </p>
+
+    <h2>3. Where your data lives</h2>
+    <p>
+      All user data is stored in <strong>Supabase</strong> (Postgres + Auth), a managed
+      database service. Connections are TLS-encrypted. Row-Level Security policies are
+      configured so each user can only read/write their own rows — staff don't routinely
+      access user data, and we have no admin tools that surface other users' reading.
+    </p>
+    <p>
+      Google Sign-In hands us your email/name/avatar via OpenID Connect; we do not get a
+      Google password or any other Google account info.
+    </p>
+
+    <h2>4. Who we share with</h2>
+    <p>
+      We do not sell or rent your data. We share it with:
+    </p>
+    <ul>
+      <li><strong>Supabase</strong> — our database/backend provider (necessary to operate the service).</li>
+      <li><strong>Google</strong> — for sign-in only. They learn you signed in to Dhelai; they don't see what you read.</li>
+      <li><strong>Apple / Google Play Billing</strong> — if and when we add in-app purchases, the storefronts handle the payment. We never see card numbers.</li>
+      <li><strong>Indian authorities</strong> — only if compelled by valid legal process under the Digital Personal Data Protection Act 2023 or related law.</li>
+    </ul>
+
+    <h2>5. Your rights</h2>
+    <p>
+      You can do all of the following at any time, free of charge, by emailing
+      <a href="mailto:support@dhelai.in">support@dhelai.in</a> from your registered email:
+    </p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of everything we have about you.</li>
+      <li><strong>Correct</strong> — fix anything that's wrong.</li>
+      <li><strong>Delete</strong> — wipe your account and all associated reading data. Done within 7 days.</li>
+      <li><strong>Export</strong> — receive a JSON export of your reading history.</li>
+      <li><strong>Withdraw consent</strong> — sign out of the app; we'll keep nothing besides what is required for legal/financial records (e.g., past invoices, if any).</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>
+      Dhelai is not directed at children under 13. We don't knowingly collect data from
+      anyone under 13. If you believe a child has signed up, email us and we'll delete the
+      account.
+    </p>
+
+    <h2>7. How long we keep data</h2>
+    <p>
+      Reading activity is retained as long as your account exists. When you delete your
+      account, we wipe everything within 7 days, except: (a) anonymous aggregate counts
+      (e.g., "this book was opened 1,234 times") which contain no personal identifiers,
+      and (b) records we must keep for legal/financial reasons (e.g., GST invoices for past
+      purchases, if any).
+    </p>
+
+    <h2>8. Security</h2>
+    <p>
+      All data is encrypted in transit (TLS) and at rest (Supabase managed encryption).
+      Database access is gated by Row-Level Security, requiring a valid auth token tied to
+      your user id. We don't use shared admin passwords; access is per-developer and
+      audit-logged.
+    </p>
+
+    <h2>9. International transfers</h2>
+    <p>
+      Our Supabase project runs in a single region —
+      <strong>Asia Pacific (Sydney, Australia — <code>ap-southeast-2</code>)</strong>.
+      By using Dhelai, you understand your data may be processed and stored in that
+      region. Australia has strong privacy laws comparable to India's DPDP Act.
+    </p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>
+      If we change anything material, we'll update the "Last updated" date above and
+      surface a one-line notice in the app. Continued use after the change means you
+      accept the new policy.
+    </p>
+
+    <h2>11. Contact</h2>
+    <p>
+      Email <a href="mailto:support@dhelai.in">support@dhelai.in</a>. Replies usually within
+      48 hours.
+    </p>
+  </article>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">dhelai</div>
+          <p class="footer-tag">
+            Books and learning, written for ordinary people. Read in the Dhelai app or your
+            favourite e-book store.
+          </p>
+        </div>
+        <div>
+          <h4>Book</h4>
+          <ul class="footer-links">
+            <li><a href="/#editions">English Edition</a></li>
+            <li><a href="/#editions">Hindi Edition</a></li>
+            <li><a href="/#read-in-app">Read in app</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:support@dhelai.in">support@dhelai.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Dhelai · Govind Kumar Wadhwa · All rights reserved.</span>
+        <span>Made with care in India.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
