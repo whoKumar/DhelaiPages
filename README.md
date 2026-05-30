@@ -24,18 +24,18 @@ website/
 ├── CNAME           # custom-domain hint for GitHub Pages → dhelai.in
 ├── README.md       # this file
 └── assets/         # book covers copied from the app's asset folder
-    ├── nsw-3d-en.png
-    ├── nsw-3d-hi.png
-    ├── nsw-fullcover-en.jpg
+    ├── tnsw_eng_3d.png
+    ├── tnsw_hi_3d
+    ├── nsw-fullcover-en.png
     └── nsw-fullcover-hi.png
 ```
 
 If the source covers change in the app, refresh the copies:
 
 ```bash
-cp ../appcode/ShoonayAISchool/assets/Book_Covers/3dCover/the-next-super-wave-3d.png assets/nsw-3d-en.png
-cp ../appcode/ShoonayAISchool/assets/Book_Covers/3dCover/the_next_super_wave_Hindi_3D.png assets/nsw-3d-hi.png
-cp ../appcode/ShoonayAISchool/assets/Book_Covers/the-next-super-wave/the-next-super-wave-fullcover-preview.jpg assets/nsw-fullcover-en.jpg
+cp ../appcode/ShoonayAISchool/assets/Book_Covers/3dCover/the-next-super-wave-3d.png assets/tnsw_eng_3d.png
+cp ../appcode/ShoonayAISchool/assets/Book_Covers/3dCover/the_next_super_wave_Hindi_3D.png assets/tnsw_hi_3d.png
+cp ../appcode/ShoonayAISchool/assets/Book_Covers/the-next-super-wave/the-next-super-wave-fullcover-preview.jpg assets/nsw-fullcover-en.png
 cp ../appcode/ShoonayAISchool/assets/Book_Covers/the-next-super-wave-hindi/the-next-super-wave-hindi-fullcover.png assets/nsw-fullcover-hi.png
 ```
 
