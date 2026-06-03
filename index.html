@@ -289,13 +289,21 @@
       background: #fff;
       color: var(--ink);
       padding: 14px 24px;
+      min-height: 52px;
       border-radius: 14px;
       display: inline-flex; align-items: center; gap: 12px;
       font-weight: 700;
       box-shadow: var(--shadow-md);
       transition: transform 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      cursor: pointer;
     }
-    .app-btn:hover { transform: translateY(-2px); text-decoration: none; }
+    /* Hover lift only on real pointer devices — avoids "first tap just hovers" on mobile */
+    @media (hover: hover) {
+      .app-btn:hover { transform: translateY(-2px); text-decoration: none; }
+    }
+    .app-btn:active { transform: scale(0.97); }
     .app-btn-icon { font-size: 24px; }
     .app-btn-text { display: flex; flex-direction: column; align-items: flex-start; }
     .app-btn-text small { font-size: 10px; color: var(--ink-3); letter-spacing: 1px; text-transform: uppercase; }
@@ -864,25 +872,9 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Open the Play Store app directly on Android (market:// deep link) with
-    // an HTTPS fallback if the Store app isn't installed/available. Other
-    // platforms get the regular https Play Store page via the default href.
-    (function () {
-      var btn = document.getElementById('playBtn');
-      if (!btn) return;
-      btn.addEventListener('click', function (e) {
-        if (!/Android/i.test(navigator.userAgent)) return; // let the default href run
-        e.preventDefault();
-        var startedAt = Date.now();
-        window.location.href = 'market://details?id=dhelai.in';
-        // If market:// didn't take us anywhere, bounce to the web URL.
-        setTimeout(function () {
-          if (Date.now() - startedAt < 2500 && !document.hidden) {
-            window.location.href = 'https://play.google.com/store/apps/details?id=dhelai.in';
-          }
-        }, 1500);
-      });
-    })();
+    // The Play Store button is a plain https link (id=dhelai.in). Android opens
+    // the Play Store app automatically for these URLs (App Links), and it works
+    // reliably inside in-app browsers too — so no market:// deep-link hijack.
   </script>
 
   <!-- Seven Waves interactive details -->
